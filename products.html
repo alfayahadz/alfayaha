@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>المشتلة | المنتجات</title>
+    <meta name="description"
+        content="تصفح كتالوج منتجات الفيّاحة: أشجار زيتون، حمضيات، تين، ونباتات زينة بجودة عالية وأسعار تنافسية.">
+    <meta name="keywords" content="بيع شتلات, زيتون, ليمون, تين, أشجار مثمرة, الجزائر, مشتلة">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="/assets/logo.png" alt="الفيّاحة">
+            </a>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="products.html" class="active">المشتلة</a></li>
+                    <li><a href="blog.html">المقالـات</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header"
+        style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/hero_bg.png');">
+        <div class="container">
+            <h1>منتجاتنا</h1>
+            <p>تصفح تشكيلتنا الواسعة من الشتلات والأشجار</p>
+        </div>
+    </div>
+
+    <section class="products-page">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="fruit-trees">أشجار مثمرة</button>
+                <button class="filter-btn" data-filter="citrus">حمضيات</button>
+                <button class="filter-btn" data-filter="olive">زيتون</button>
+            </div>
+
+            <div class="products-grid">
+                <!-- Item 1: Olive Chemlal -->
+                <div class="product-card" data-category="olive">
+                    <div class="seasonal-badge"><i class="fas fa-leaf"></i> الأنسب للغرس الآن</div>
+                    <img src="/assets/product_olive.png" alt="شتلة زيتون" class="product-image">
+                    <div class="product-info">
+                        <h3>شتلة زيتون شملال</h3>
+                        <p>مقاوم للجفاف، مثالي للمناخ الجزائري.</p>
+                        <a href="https://wa.me/213794583797?text=مهتم بشتلة الزيتون" class="btn-sm" target="_blank">اطلب
+                            الآن <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Item 2: Lemon -->
+                <div class="product-card" data-category="citrus">
+                    <div class="seasonal-badge"><i class="fas fa-sun"></i> الأكثر مبيعاً</div>
+                    <img src="/assets/product_lemon.png" alt="شتلة ليمون" class="product-image">
+                    <div class="product-info">
+                        <h3>شتلة ليمون 4 فصول</h3>
+                        <p>إنتاج وفير طوال السنة.</p>
+                        <a href="https://wa.me/213794583797?text=مهتم بشتلة الليمون" class="btn-sm" target="_blank">اطلب
+                            الآن <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Item 3: Fig -->
+                <div class="product-card" data-category="fruit-trees">
+                    <img src="/assets/product_fig.png" alt="شتلة تين" class="product-image">
+                    <div class="product-info">
+                        <h3>شتلة تين (كرموس)</h3>
+                        <p>ثمار حلوة المذاق وحجم كبير.</p>
+                        <a href="https://wa.me/213794583797?text=مهتم بشتلة التين" class="btn-sm" target="_blank">اطلب
+                            الآن <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Item 4: Orange -->
+                <div class="product-card" data-category="citrus">
+                    <img src="/assets/product_lemon.png" alt="برتقال طومسون" class="product-image">
+                    <div class="product-info">
+                        <h3>شتلة برتقال طومسون</h3>
+                        <p>برتقال عصيري ولذيذ جداً.</p>
+                        <a href="https://wa.me/213794583797?text=مهتم بشتلة البرتقال" class="btn-sm"
+                            target="_blank">اطلب الآن <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Item 5: Olive Sigwaz -->
+                <div class="product-card" data-category="olive">
+                    <img src="/assets/product_olive.png" alt="زيتون سيقواز" class="product-image">
+                    <div class="product-info">
+                        <h3>شتلة زيتون سيقواز</h3>
+                        <p>مخصص للتخليل (زيتون الطاولة).</p>
+                        <a href="https://wa.me/213794583797?text=مهتم بشتلة زيتون سيقواز" class="btn-sm"
+                            target="_blank">اطلب الآن <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Item 6: Grape -->
+                <div class="product-card" data-category="fruit-trees">
+                    <img src="/assets/product_fig.png" alt="عنب" class="product-image">
+                    <div class="product-info">
+                        <h3>شجيرة عنب (دالية)</h3>
+                        <p>عنب أسود أو أبيض حسب الطلب.</p>
+                        <a href="https://wa.me/213794583797?text=مهتم بشتلة العنب" class="btn-sm" target="_blank">اطلب
+                            الآن <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2024 الفيّاحة</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/213000000000" class="floating-whatsapp" target="_blank" title="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="Zoomed Image" id="lightbox-img">
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

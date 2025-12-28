@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>تفاصيل المقال | الفيّاحة</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="/assets/logo.png" alt="الفيّاحة">
+            </a>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="products.html">المشتلة</a></li>
+                    <li><a href="blog.html" class="active">المقالـات</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header" id="hero-bg"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/hero_bg.png');">
+        <div class="container">
+            <h1 id="article-title">جاري تحميل المقال...</h1>
+            <p id="article-date"></p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="article-content"
+                style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <img src="" alt="صورة المقال" id="article-img"
+                    style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 30px; display: none;">
+
+                <div id="article-body">
+                    <!-- Content will be injected here -->
+                </div>
+
+                <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+                    <a href="blog.html" class="btn-sm"><i class="fas fa-arrow-right"></i> العودة للمقالات</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2024 الفيّاحة</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        const articles = {
+            'olive': {
+                title: 'كيف تعتني بشجرة الزيتون؟',
+                date: '<i class="far fa-calendar-alt"></i> 28 ديسمبر 2024',
+                img: '/assets/product_olive.png',
+                body: `
+                    <h2 style="color: var(--primary-green); margin-bottom: 20px;">مقدمة عن شجرة الزيتون</h2>
+                    <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">شجرة الزيتون هي شجرة مباركة ومعمرة. زراعتها تتطلب صبراً، لكن ثمارها كنز.</p>
+                    <h3 style="color: var(--secondary-green); margin-bottom: 15px;">1. الري (السقي)</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">أشجار الزيتون تتحمل الجفاف، لكن للإنتاج التجاري يجب ريها بانتظام في الصيف.</p>
+                    <h3 style="color: var(--secondary-green); margin-bottom: 15px;">2. التسميد</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">تحتاج الشجرة إلى الدعم بالسماد العضوي والنيتروجين في بداية الربيع.</p>
+                `
+            },
+            'citrus': {
+                title: 'أسرار نجاح الحمضيات',
+                date: '<i class="far fa-calendar-alt"></i> 25 ديسمبر 2024',
+                img: '/assets/product_lemon.png',
+                body: `
+                    <h2 style="color: var(--primary-green); margin-bottom: 20px;">العناية بأشجار الليمون والبرتقال</h2>
+                    <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">الحمضيات حساسة للبرد وتحتاج إلى شمس بوفرة. إليك كيف تضمن ازدهارها.</p>
+                    <h3 style="color: var(--secondary-green); margin-bottom: 15px;">1. الموقع</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">اختر مكاناً مشمساً محمياً من الرياح القوية.</p>
+                    <h3 style="color: var(--secondary-green); margin-bottom: 15px;">2. محاربة صانعة الأنفاق</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">هذه الآفة خطيرة على الأوراق الجديدة. راقب النموات الحديثة باستمرار.</p>
+                `
+            },
+            'fig': {
+                title: 'طرق تكاثر التين (الغراس)',
+                date: '<i class="far fa-calendar-alt"></i> 20 ديسمبر 2024',
+                img: '/assets/product_fig.png',
+                body: `
+                    <h2 style="color: var(--primary-green); margin-bottom: 20px;">إكثار التين بالعقل</h2>
+                    <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">التين من أسهل الأشجار تكاثراً. أفضل وقت هو فترة السكون الشتوي.</p>
+                    <h3 style="color: var(--secondary-green); margin-bottom: 15px;">1. اختيار العقلة</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">اختر غصناً بعمر سنة، بطول 20-30 سم ويحتوي على عدة براعم.</p>
+                    <h3 style="color: var(--secondary-green); margin-bottom: 15px;">2. الغرس</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">اغرس ثلثي العقلة في تربة خفيفة وحافظ على رطوبتها.</p>
+                `
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+
+        if (id && articles[id]) {
+            const data = articles[id];
+            document.getElementById('article-title').innerHTML = data.title;
+            document.getElementById('article-date').innerHTML = data.date;
+            document.getElementById('article-img').src = data.img;
+            document.getElementById('article-img').style.display = 'block';
+            document.getElementById('article-body').innerHTML = data.body;
+            document.title = data.title + ' | الفيّاحة';
+        } else {
+            document.getElementById('article-body').innerHTML = '<p>المقال غير موجود.</p>';
+        }
+    </script>
+</body>
+
+</html>

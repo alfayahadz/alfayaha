@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>تواصل معنا | الفيّاحة</title>
+    <meta name="description"
+        content="تواصل مع فريق الفيّاحة لطلب الشتلات أو الاستفسار عن خدماتنا الزراعية. نحن في خدمتكم.">
+    <meta name="keywords" content="تواصل معنا, طلب شتلات, واتساب, الجزائر, عنوان المشتلة">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="/assets/logo.png" alt="الفيّاحة">
+            </a>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="products.html">المشتلة</a></li>
+                    <li><a href="blog.html">المقالـات</a></li>
+                    <li><a href="contact.html" class="active">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header"
+        style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/hero_bg.png');">
+        <div class="container">
+            <h1>تواصل معنا</h1>
+            <p>نحن هنا للإجابة على جميع استفساراتكم</p>
+        </div>
+    </div>
+
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> الجزائر العاصمة، الجزائر</p>
+                    <p><i class="fas fa-phone"></i> 0794583797</p>
+                    <p><i class="fas fa-envelope"></i> alfayahadz@gmail.com</p>
+                    <div class="social-links-colored">
+                        <a href="https://www.facebook.com/profile.php?id=61585754784910" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/al_fayaha" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/213794583797" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+
+                </div>
+                <div class="contact-form">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="whatsappForm" onsubmit="sendToWhatsapp(event)">
+                        <input type="text" id="name" placeholder="الاسم الكامل" required>
+                        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+                        <textarea id="message" placeholder="رسالتك..." rows="5" required></textarea>
+                        <button type="submit" class="btn-primary"><i class="fab fa-whatsapp"></i> إرسال عبر
+                            واتساب</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2024 الفيّاحة</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/213794583797" class="floating-whatsapp" target="_blank" title="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
