@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
         // Close menu on mobile after click
-        navLinks.classList.remove('active');
+        if (navLinks) {
+          navLinks.classList.remove('active');
+        }
       }
     });
   });
@@ -46,20 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const productCards = document.querySelectorAll('.product-card');
 
-  if (filterBtns.length > 0) {
+  if (filterBtns.length > 0 && productCards.length > 0) {
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Remove active class from all buttons
         filterBtns.forEach(b => b.classList.remove('active'));
-        // Add active class to clicked button
         btn.classList.add('active');
-
         const filterValue = btn.getAttribute('data-filter');
-
         productCards.forEach(card => {
           if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
             card.classList.remove('hidden');
-            // Reset animation to play it again
             card.style.animation = 'none';
             card.offsetHeight; /* trigger reflow */
             card.style.animation = 'fadeIn 0.5s ease';
@@ -76,34 +73,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxImg = document.getElementById('lightbox-img');
   const closeBtn = document.querySelector('.lightbox-close');
 
-  if (lightbox) {
-    // Open Lightbox
+  if (lightbox && lightboxImg && closeBtn) {
     document.querySelectorAll('.product-image').forEach(img => {
       img.addEventListener('click', () => {
         lightboxImg.src = img.src;
         lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+        document.body.style.overflow = 'hidden';
       });
-      // Add cursor pointer to indicate clickable
       img.style.cursor = 'zoom-in';
     });
 
-    // Close Lightbox functions
     const closeLightbox = () => {
       lightbox.classList.remove('active');
-      document.body.style.overflow = 'auto'; // Re-enable scrolling
+      document.body.style.overflow = 'auto';
     };
 
     closeBtn.addEventListener('click', closeLightbox);
-
-    // Close on clicking outside image
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
         closeLightbox();
       }
     });
-
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && lightbox.classList.contains('active')) {
         closeLightbox();
@@ -115,11 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
 function sendToWhatsapp(e) {
   e.preventDefault();
 
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
+  const nameEl = document.getElementById("name");
+  const emailEl = document.getElementById("email");
+  const messageEl = document.getElementById("message");
 
-  var phonenumber = "213794583797"; // Your phone number here
+  if (!nameEl || !emailEl || !messageEl) {
+    console.warn("Contact form elements not found.");
+    return;
+  }
+
+  var name = nameEl.value;
+  var email = emailEl.value;
+  var message = messageEl.value;
+
+  var phonenumber = "213794583797";
 
   var url = "https://wa.me/" + phonenumber + "?text="
     + "*اسم العميل:* " + name + "%0a"
